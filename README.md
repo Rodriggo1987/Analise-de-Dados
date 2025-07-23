@@ -5,7 +5,8 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 
 ## 📂 Projetos incluídos:
 
-- 🔍 [Análise de Vendas] - [![Dashboard Power BI] (https://img.shields.io/badge/Abrir%20Dashboard%20Power%20BI-blue?style=for-the-badge&logo=powerbi)]
+- 🔍 [Dashboard Power BI] (https://img.shields.io/badge/Abrir%20Dashboard%20Power%20BI-blue?style=for-the-badge&logo=powerbi)
+
 -                           
 - 📉 
 - 📊 
