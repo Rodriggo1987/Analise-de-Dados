@@ -4,7 +4,7 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 
 ## 📂 Projetos incluídos:
 
--- 🔍 [Dashboard Power BI] - https://app.fabric.microsoft.com/reportEmbed?reportId=26b2e6e6-7e3d-4ee7-b192-8312b89ebe53&autoAuth=true&ctid=d8bde65a-3ded-4346-9518-670204e6e184
+- 🔍 [Dashboard Power BI] - https://app.fabric.microsoft.com/reportEmbed?reportId=26b2e6e6-7e3d-4ee7-b192-8312b89ebe53&autoAuth=true&ctid=d8bde65a-3ded-4346-9518-670204e6e184
 
 - 📉 [Carga de Dados Power Query]
 
