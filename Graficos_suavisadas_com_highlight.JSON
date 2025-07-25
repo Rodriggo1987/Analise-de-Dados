@@ -1,0 +1,280 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "usermeta": {
+    "deneb": {
+      "build": "1.6.0.2",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "5.16.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": true,
+      "highlight": true,
+      "dataPointLimit": 50
+    },
+    "information": {
+      "name": "linhas suavisadas com highlight",
+      "description": "Gráfico de faturamento ao longo do tempo que evidencia o maior faturamento em um determinado período.",
+      "author": "Ana Duarte",
+      "uuid": "2c33b5ec-6660-4dba-b0bc-bce8576b36f8",
+      "generated": "2023-11-23T15:39:17.982Z",
+      "previewImageBase64PNG": "data:image/png;base64,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"
+    },
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Mês",
+        "description": "",
+        "type": "text",
+        "kind": "column"
+      },
+      {
+        "key": "__1__",
+        "name": "FaturamentoTotal",
+        "description": "",
+        "type": "numeric",
+        "kind": "measure"
+      },
+      {
+        "key": "__2__",
+        "name": "FaturamentoFormatado",
+        "description": "",
+        "type": "text",
+        "kind": "measure"
+      },
+      {
+        "key": "__3__",
+        "name": "FaturamentoTotal MoM%",
+        "description": "",
+        "type": "numeric",
+        "kind": "measure"
+      }
+    ]
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "font": "Segoe UI",
+    "area": {
+      "line": true,
+      "fillOpacity": 0.7,
+      "color": {
+        "x1": 0,
+        "x2": 0,
+        "y1": 1,
+        "y2": 0,
+        "gradient": "linear",
+        "stops": [
+          {
+            "offset": 0,
+            "color": "rgba(25, 50, 92,0)"
+          },
+          {
+            "offset": 1,
+            "color": "rgba(25, 50, 92,0.9)"
+          }
+        ]
+      }
+    },
+    "axis": {
+      "ticks": false,
+      "grid": false,
+      "domain": false,
+      "labelFontSize": 12,
+      "labelFontWeight": 200,
+      "labelColor": "#95A9B8",
+      "title": null
+    },
+    "axisX": {"labelPadding": 5},
+    "axisY": {"labelPadding": 10}
+  },
+  "data": {"name": "dataset"},
+  "params": [
+    {
+      "name": "linha_cor",
+      "value": "rgba(25, 50, 92,1)"
+    },
+    {
+      "name": "linha_espessura",
+      "value": 3
+    },
+    {
+      "name": "marcador_tam",
+      "value": 0
+    },
+    {
+      "name": "marcador_cor",
+      "value": "#EF9010"
+    },
+    {
+      "name": "marcador_linha_espessura",
+      "value": 2
+    },
+    {
+      "name": "marcador_borda_cor",
+      "value": "#fff"
+    },
+    {
+      "name": "valor_cor",
+      "value": "rgba(25, 50, 92,1)"
+    },
+    {"name": "valor_tam", "value": 10},
+    {
+      "name": "valor_peso",
+      "value": 500
+    },
+    {
+      "name": "valor_posicao",
+      "value": -12
+    }
+  ],
+  "encoding": {
+    "x": {
+      "type": "nominal",
+      "field": "__0__",
+      "sort": ["jan"],
+      "axis": {
+        "labelAngle": 0,
+        "labelPadding": 10
+      }
+    },
+    "y": {
+      "type": "quantitative",
+      "field": "__1__",
+      "axis": null
+    },
+    "opacity": {
+      "condition": {
+        "test": "datum['__selected__'] == 'off' ",
+        "value": 0.3
+      },
+      "value": 1
+    }
+  },
+  "layer": [
+    {
+      "description": " **** AREA ***",
+      "mark": {
+        "type": "area",
+        "interpolate": "natural",
+        "line": {
+          "stroke": {
+            "expr": "linha_cor"
+          },
+          "strokeWidth": {
+            "expr": "linha_espessura"
+          },
+          "strokeCap": "round",
+          "strokeJoin": "round",
+          "strokeDash": [0, 0]
+        },
+        "point": {
+          "shape": "circle",
+          "size": {
+            "expr": "marcador_tam"
+          },
+          "filled": false,
+          "fill": {
+            "expr": "marcador_cor"
+          },
+          "stroke": {
+            "expr": "marcador_borda_cor"
+          },
+          "strokeWidth": {
+            "expr": "marcador_linha_espessura"
+          },
+          "tooltip": true
+        }
+      },
+      "encoding": {
+        "tooltip": [
+          {"field": "__0__"},
+          {"field": "__1__"}
+        ]
+      }
+    },
+    {
+      "description": " **** RÓTULO DINÂMICO TITULO  ***",
+      "transform": [
+        {
+          "window": [
+            {"op": "rank", "as": "rank"}
+          ],
+          "sort": [
+            {
+              "field": "__1__",
+              "order": "descending"
+            }
+          ]
+        },
+        {"filter": "datum.rank <=1"}
+      ],
+      "mark": {
+        "type": "text",
+        "yOffset": -70,
+        "size": 30,
+        "fontWeight": 800,
+        "color": {"expr": "valor_cor"}
+      },
+      "encoding": {
+        "text": {"field": "__2__"}
+      }
+    },
+    {
+      "description": " **** RÓTULO DINÂMICO SUBTITULO  ***",
+      "transform": [
+        {
+          "window": [
+            {"op": "rank", "as": "rank"}
+          ],
+          "sort": [
+            {
+              "field": "__1__",
+              "order": "descending"
+            }
+          ]
+        },
+        {"filter": "datum.rank <=1"},
+        {
+          "calculate": "'maior faturamento - foi em '+ datum['__0__']",
+          "as": "Subtitulo"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "yOffset": -50,
+        "size": 10,
+        "fontWeight": 400,
+        "color": {"expr": "valor_cor"},
+        "lineBreak": "-"
+      },
+      "encoding": {
+        "text": {"field": "Subtitulo"}
+      }
+    },
+    {
+      "description": " **** RÓTULO DADOS  ***",
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dx": 0,
+        "baseline": "bottom",
+        "angle": 0,
+        "dy": {
+          "expr": "datum['__1__'] >= 0 ? valor_posicao : valor_posicao * -1 "
+        },
+        "color": {"expr": "valor_cor"},
+        "fontSize": {
+          "expr": "valor_tam"
+        },
+        "fontWeight": {
+          "expr": "valor_peso"
+        }
+      },
+      "encoding": {
+        "text": {"field": "__2__"}
+      }
+    }
+  ]
+}

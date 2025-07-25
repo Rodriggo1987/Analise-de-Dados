@@ -1,0 +1,122 @@
+<!-- Componente OpenXBI, ajude-nos compartilhando nossa plataforma -->
+<!-- https://openxbi.com.br -->
+<div class='chart-container'>
+    <div class='chart-content'>
+        <strong>Pódio dos Vendedores</strong> <!-- Título -->
+        <div class='places'>
+            <div class='silver'>
+                <img src='https://randomuser.me/api/portraits/women/8.jpg'
+                class='photo'> <!-- Foto Vendagar-->
+                <small>Karol</small> <!-- Nome 2º lugar-->
+                <div class='bar'>2º</div>
+            </div>
+            <div class='gold'>
+                <img src='https://randomuser.me/api/portraits/women/90.jpg'
+                class='photo'> <!-- Foto 1º lugar-->
+                <small>Camile</small> <!-- Nome 1º lugar-->
+                <div class='bar'>1º</div>
+            </div>
+            <div class='bronze'>
+                <img src='https://randomuser.me/api/portraits/men/3.jpg' 
+                class='photo'> <!-- Foto 3º lugar-->
+                <small>Marcos</small> <!-- Nome 3º lugar-->
+                <div class='bar'>3º</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chart-content strong {
+    font-family: 'Inter', sans-serif; 
+    color: #374151;/* Cor da fonte do titulo */
+    margin-top: .5rem;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.chart-content small {
+    margin: .5rem 0;
+    color: rgb(77, 77, 77); /* Cor dos nomes */
+    animation: flutuar 5s infinite;
+}
+.chart-content {
+    display: flex;
+    flex-direction: column;
+    background: white;  /* Cor do Chart */
+    padding: .5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px rgb(206, 206, 206);
+    margin: .2rem;
+    max-width: 500px; /* Largura do Chart */
+    max-height: 1000px;
+    width: 100%;
+}
+.places {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+    height: auto;
+}
+.chart-content img {
+    border-radius: 50%; /* Raio da borda */
+    width: 50px; /* Largura da imagem, modifica também a altura */
+}
+.gold, .silver, .bronze {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgb(255, 246, 229);
+    height: 400px; /* Altura total dos 3 pódios, com imagem e nome */
+}
+.gold img { border: 3px solid #000035; box-shadow: 7px 1px 7px 	#666685;}
+.silver img { border: 3px solid #062863; box-shadow: 1px 1px 7px #8293b1;}
+.bronze img { border: 3px solid #1c4c96; box-shadow: 1px 1px 7px #8da5ca;}
+/* Barras */
+.bar {
+    border-radius: 8px 8px 0 0; /* Raio das bordas superiores */
+}
+.gold > .bar {
+    height: 200px; /* Altura do 1º lugar, e abaixo as cores */
+    background: linear-gradient(#000035, #666685);
+    padding: 2rem;
+    border-bottom: 3px solid #000035; 
+}
+.silver > .bar {
+    height: 160px; /* Altura do 2º lugar, e abaixo as cores */
+    background: linear-gradient(#062863, #8293b1);
+    padding: 2rem;
+    border-bottom: 3px solid #062863;
+}
+.bronze > .bar {
+    height: 120px; /* Altura do 3º lugar, e abaixo as cores */
+    background: linear-gradient(#1c4c96, #8da5ca);
+    padding: 2rem;
+    border-bottom: 3px solid #1c4c96;
+}
+.chart-content img { /* Borda e sombra da imagem, com animação */
+    
+    animation: flutuar 5s infinite;
+}
+/* keyframes são conjunto de propriedades para animar um objeto */
+@keyframes flutuar { /* Keyframe da animação */
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-5px);}
+    100% {transform: translateY(0px);}
+}
+</style>

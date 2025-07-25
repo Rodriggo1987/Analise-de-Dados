@@ -1,0 +1,135 @@
+<div class='card-container'>
+    <div class='card-content'>
+        <div class='flip-card-rotate'>
+            <div class='card-front'>
+                <p class='card-title'>Itens vendidos</p> <!-- Título do cartão -->
+                <p class='value'>897</p> <!-- valor da quantidade (frente) -->
+            </div>
+            <div class='card-back'>
+                <p class='card-title'>Itens vendidos</p> <!-- Título do cartão -->
+                <p class='value'>897</p> <!-- valor da quantidade (costas) -->
+            </div>
+        </div>  
+        <div class='target-card'>
+            <p> <strong>Livro</strong>:  280 itens </p><!-- detalhes: cartão oculto -->
+        </div>
+    </div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif; /* Font do component, remova para usar a font nativa do PBI */
+    color: #374151; /* Cor da font valores */
+    margin: 0; /* Remove todas as margens iniciais */
+    box-sizing: border-box;
+}
+
+.card-container, .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+
+}
+
+.card-content {
+    flex-direction: column;
+    cursor: help; /* Exibe uma interrogação junto ao cursor ao passar o mouse */
+    margin-top: .5rem; /* Um espaço de folga na parte superior */
+
+
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1rem;
+
+}
+
+/* Envolve os dois cards */
+
+.flip-card-rotate {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    
+    transition: transform 0.4s; /* tempo de transição */
+    transform-style: preserve-3d; /* mantem a transformação relacionada ao elemento pai 'card-content' */
+}
+
+/* Texto dos cards */
+
+.flip-card-rotate p {
+    margin: .75rem 0;
+    margin-left: 1rem;
+}
+
+/* Envolve a estilização dos dois componentes ao mesmo tempo */
+
+.card-front, .card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: absolute; /* Traz flexibilidade aos dois cards quanto a posições */
+
+    width: 280px; /* Largura do card */
+    height: 140px; /* altura do card */
+    
+    border: 1px solid rgba(136, 136, 136, 0.1);
+    box-shadow: 1px 1px 2px 1px rgba(133, 133, 133, 0.1);
+    border-radius: 11px; /* Raio da borda */
+    
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    background: white; /* cor de fundo do card */    
+}
+
+
+.value {
+    margin-top: -2rem ; /* remove uma margem superior */
+    color: #1F2937; /* cor do texto */
+    font-size: 3rem; /* tamanho da font */
+    font-weight: 700; /* peso da font do valor em moeda */
+    text-align: center; /* alinha o texto ao lado direito */
+}
+
+
+/* Body utilizado para capturar a rotação 
+ * body não existe na construção do HTML mas ele é introduzido implícitamente */
+
+body:hover .flip-card-rotate {
+    transform: rotateY(180deg); /* Rotaciona os dois cards */
+}
+
+/* Card front é o que ira vir para frente ao passar o mouse */
+.card-front {
+    transform: rotateY(180deg); /* inicia invertido em 180º */
+}
+
+/* Card com o Target - será exibido posteriormente ao passar o mouse na parte inferior externa */
+
+.target-card {
+    font-size: 0.875rem; /* Tamanho da font do card */
+
+    padding: .5rem 1rem; /* preenchimentos internos do card */
+
+    background: white; /* Cor de fundo do card */
+
+    border: 1px solid rgba(136, 136, 136, 0.1);
+    box-shadow: 1px 1px 2px 1px rgba(133, 133, 133, 0.1);
+    border-radius: 8px; /* Raio da borda */
+    
+    opacity: 0; /* Opacidade inicial */
+    transition: all 200ms; /* Tempo de transição */
+}
+
+body:hover .target-card {
+    opacity: 1; /* Exibe o card ao passar o mouse em cima */
+    transform: translateY(130px); /* Posição final do card */
+}
+</style>

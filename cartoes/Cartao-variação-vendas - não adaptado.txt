@@ -1,0 +1,94 @@
+<div class='card-container'>
+    <div class='card-content'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons:FILL'> <!-- Referência do ícone -->
+        <div class='title'>
+            <p class='title-text'>
+               Total de vendas <!-- Título do cartão -->
+            </p>
+            <i id = 'mom' class='percent'>
+              MoM: <span class='material-icons'>arrow_drop_up</span> 17%  <!-- variação percentual, adicionar um IF para o arrow_drop_down -->
+            </i>
+        </div>
+        <div class='data'>
+            <p>6169</p> <!-- Valor do total de vendas exibido -->
+        </div>
+    </div>
+</div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Alinha todos items ao centro */
+
+.card-container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    height: 100%;
+}
+
+.card-content {
+    font-family: 'Inter', sans-serif; /* Font do component, remova para usar a font nativa do PBI */
+    margin: 0; /* Remove todas as margens do card */
+    padding: 1.2rem; /* Preenchimento envolta do card */
+    background-color: #fff; /* Cor de fundo do card */
+    border: 2px solid rgba(136, 136, 136, 0.1);/* borda do card */
+    box-shadow: 1px 1px 2px 1px rgba(133, 133, 133, 0.1);
+    max-width: 280px; /* largura máxima do card */
+    max-height: 140px; /* alura máxima do card */
+    width: 100%; /* Adaptação a larguras menores que 250px definida acima */
+    border-radius: 11px; /* Raio da borda do card */
+    
+}
+
+/* Estiliza o título e o growth */
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Estiliza o título */
+
+.title-text {
+    margin: -0.5rem;  /*remove uma margem superior */
+    margin-left: 0.09rem;
+    font-size: 1rem; /* Tamanho da font */
+    color: #374151; /* Cor do título */
+    font-weight: 600; /* peso da font da % */
+    margin-bottom: 0rem;
+}
+
+/* Valor de % do card */
+
+.percent {
+    margin: 0; /* remove uma margem superior */
+    margin-left: 0.3rem;
+    font-size: 0.9rem; /* Tamanho da font */
+    color: #19325C; /* cor da porcentagem */
+    font-weight: 100; /* peso da font da % */
+    display: flex;
+
+}
+
+/* estiliza o valor em moeda */
+
+.data  {
+    margin: -2.5rem  ;  /* aplica margin superior e inferior */
+    color: #1F2937; /* cor do texto */
+    font-size: 3rem; /* tamanho da font */
+    font-weight: 700; /* peso da font do valor em moeda */
+    text-align: center; /* alinha o texto ao lado direito */
+}
+
+</style>
+
+<script>
+const mom = document.getElementById('mom');
+mom.addEventListener('click', ()=>{
+mom.innerHTML=teste});
+
+
+</script>
+
+
