@@ -5,11 +5,11 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 
 ## 📂 Projetos incluídos:
 
-- 🔍 [Dashboard Power BI] (https://img.shields.io/badge/Abrir%20Dashboard%20Power%20BI-blue?style=for-the-badge&logo=powerbi)
+- 🔍 [Dashboard Power BI] - https://app.fabric.microsoft.com/reportEmbed?reportId=26b2e6e6-7e3d-4ee7-b192-8312b89ebe53&autoAuth=true&ctid=d8bde65a-3ded-4346-9518-670204e6e184
 
--                           
-- 📉 
-- 📊 
+- 📉 [Carga de Dados Power Query]
+
+- 📉 [Power BI: criando visuais customizados] - https://app.fabric.microsoft.com/reportEmbed?reportId=513a73e9-f4c0-4cd9-86e4-fd5c1d8becf2&autoAuth=true&ctid=d8bde65a-3ded-4346-9518-670204e6e184
 ---
 
 
