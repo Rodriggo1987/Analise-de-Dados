@@ -20,12 +20,10 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 - Explorar e visualizar as informações
 - Detectar padrões e correlações
 - Gerar insights para [objetivo específico, ex: otimizar vendas, reduzir churn, etc.]
-- Crie visuais declarativos com o Vega, Vega-LIte e JSON no Deneb
-- Construa gráficos personalizados utilizando as linguagens HTML e CSS
 
 ---
 
-## 📊 Ferramentas Utilizadas
+## 📊 Ferramentas Utilizadas / Métodos
 
 - Python 3.x
 - Pandas
@@ -33,8 +31,14 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 - Matplotlib / Seaborn
 - Scikit-learn (se houver modelos)
 - Jupyter Notebook
-- HTML
 - DAX
+- ETL
+- Vega-LIte
+- Deneb
+- HTML
+- CSS
+
+---
 
 ## 🚀 Como Executar
 
