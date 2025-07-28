@@ -24,7 +24,7 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 
 ---
 
-## 📊 Ferramentas Utilizadas
+## 📊 Ferramentas Utilizadas / Métodos
 
 - Python 3.x
 - Pandas
@@ -32,6 +32,12 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 - Matplotlib / Seaborn
 - Scikit-learn (se houver modelos)
 - Jupyter Notebook
+- DAX
+- ETL
+- Vega-LIte
+- Deneb
+- HTML
+- CSS
 
 ---
 
