@@ -1,4 +1,3 @@
-
 # 🚀 Portfólio de Projetos de Análise de Dados
 
 Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento, focando em análise de dados, visualizações e modelos preditivos.
@@ -24,7 +23,7 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 
 ---
 
-## 📊 Ferramentas Utilizadas
+## 📊 Ferramentas Utilizadas / Métodos
 
 - Python 3.x
 - Pandas
@@ -32,6 +31,12 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 - Matplotlib / Seaborn
 - Scikit-learn (se houver modelos)
 - Jupyter Notebook
+- DAX
+- ETL
+- Vega-LIte
+- Deneb
+- HTML
+- CSS
 
 ---
 
@@ -40,3 +45,5 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 1. Clone o repositório:
 ```bash
 git clone [https://github.com/usuario/repositorio.git](https://github.com/Rodriggo1987/Analises-De-Dados.git)
+
+
