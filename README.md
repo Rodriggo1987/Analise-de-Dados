@@ -35,7 +35,6 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 - Pandas
 - NumPy
 - Matplotlib / Seaborn
-- Scikit-learn (se houver modelos)
 - Jupyter Notebook
 - DAX
 - ETL
