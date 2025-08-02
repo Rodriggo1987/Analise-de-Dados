@@ -4,13 +4,16 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 
 ## 📂 Projetos incluídos:
 
-- 📉 [Dashboard Power BI] - https://app.fabric.microsoft.com/reportEmbed?reportId=26b2e6e6-7e3d-4ee7-b192-8312b89ebe53&autoAuth=true&ctid=d8bde65a-3ded-4346-9518-670204e6e184
+- 📉 [Dashboard Power BI] - https://app.fabric.microsoft.com/reportEmbed?reportId=743625fb-c75e-4a0b-86da-9705aeb3eb64&autoAuth=true&ctid=3ad67aac-219a-421d-9475-561ebcb1cd19
 
 - 📉 [Carga de Dados Power Query]
 
-- 📉 [Power BI: criando visuais customizados] - https://app.fabric.microsoft.com/reportEmbed?reportId=513a73e9-f4c0-4cd9-86e4-fd5c1d8becf2&autoAuth=true&ctid=d8bde65a-3ded-4346-9518-670204e6e184
+- 📉 [Power BI: criando visuais customizados] - https://app.fabric.microsoft.com/reportEmbed?reportId=e005740c-008e-4d56-bee2-9102f5aa63c6&autoAuth=true&ctid=3ad67aac-219a-421d-9475-561ebcb1cd19
+  
+- 📉 [Power BI: DAX contextos e iteração] - https://app.fabric.microsoft.com/reportEmbed?reportId=8c5f9247-aa05-4678-a439-2eec49f7b329&autoAuth=true&ctid=3ad67aac-219a-421d-9475-561ebcb1cd19
 
-- 📉 [Power BI: DAX contextos e iteração] - https://app.fabric.microsoft.com/reportEmbed?reportId=788dd1c6-8825-4901-9184-85466446d566&autoAuth=true&ctid=d8bde65a-3ded-4346-9518-670204e6e184
+- 📉 [Power BI: construindo cálculos com Dax] - https://app.powerbi.com/view?r=eyJrIjoiZjM1ODg0MzYtZTY2OC00M2ZlLTk4ZTMtNWY4Zjk3MzE5N2U4IiwidCI6IjNhZDY3YWFjLTIxOWEtNDIxZC05NDc1LTU2MWViY2IxY2QxOSJ9
+
 
 
 
