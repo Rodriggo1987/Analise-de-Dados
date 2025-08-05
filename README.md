@@ -14,6 +14,8 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 
 - 📉 [Power BI: construindo cálculos com Dax] - https://app.powerbi.com/view?r=eyJrIjoiZjM1ODg0MzYtZTY2OC00M2ZlLTk4ZTMtNWY4Zjk3MzE5N2U4IiwidCI6IjNhZDY3YWFjLTIxOWEtNDIxZC05NDc1LTU2MWViY2IxY2QxOSJ9
 
+- 📉 [Power BI: visualizando e analisando dados] - https://app.fabric.microsoft.com/reportEmbed?reportId=c8911c23-9d9f-4a6f-8b23-8dab04a1f79c&autoAuth=true&ctid=3ad67aac-219a-421d-9475-561ebcb1cd19
+
 
 
 ---
