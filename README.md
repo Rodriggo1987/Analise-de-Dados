@@ -23,7 +23,7 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
 - Coletar e preparar os dados
 - Explorar e visualizar as informações
 - Detectar padrões e correlações
-- Gerar insights para [objetivo específico, ex: otimizar vendas, reduzir churn, etc.]
+- Gerar insights para [objetivo específico, ex: otimizar vendas, reduzir custo, séries temporais, tendências, previsões e localização de anomalias etc.]
 
 ---
 
