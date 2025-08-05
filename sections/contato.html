@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contato - Rodrigo Nascimento</title>
+  <link rel="stylesheet" href="/css/style.css"> <!-- seu CSS base -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- ícones -->
+  <link rel="stylesheet" href="/css/contato.css">
+
+ 
+<style>
+  
+</style>
+
+</head>
+<body>
+  <header id="header-placeholder"></header>
+
+  <section class="contato-section">
+    <!-- Coluna da esquerda: informações de contato -->
+    <div class="contato-info">
+      <h2><span>Entre em</span> Contato</h2>
+      
+      <p>Entre em contato caso tenha alguma dúvida ou oportunidade. Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de fazer parte da sua visão.</p>
+
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <strong>E-mail</strong><br>
+          nasscimmento@hotmail.com
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="fas fa-phone"></i>
+        <div>
+          <strong>Telefone</strong><br>
+          11-989561439
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <strong>Localização</strong><br>
+          São Paulo - SP  
+      
+        </div>
+      </div>
+
+      <div class="social-icons">
+        <p><strong>Minha Midías Sociais</strong></p>
+        <a href="https://www.linkedin.com/in/rodrigo-cerqueira-81b66659/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Rodriggo1987?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/5511989561439" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <!-- Coluna da direita: formulário -->
+    <form class="contato-form" method="POST" action="https://formspree.io/f/mgvzovqw">
+  <label for="nome">Seu Nome</label>
+  <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+  <label for="email">Seu Email</label>
+  <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+  <label for="assunto">Assunto</label>
+  <input type="text" id="assunto" name="assunto" placeholder="Qual o assunto?" required>
+
+  <label for="mensagem">Sua Mensagem</label>
+  <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+
+  <button type="submit">Enviar Mensagem</button>
+</form>
+
+  </section>
+
+  <script>
+    fetch('/header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+      })
+      .catch(err => console.error('Erro ao carregar header:', err));
+  </script>
+  <script>
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <div id="footer"></div>
+
+</body>
+</html>

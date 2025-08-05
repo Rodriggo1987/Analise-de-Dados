@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre mim - Rodrigo Nascimento</title>
+
+  <!-- Estilos e ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css">
+  
+  
+
+</head>
+
+<body>
+  <!-- Header carregado dinamicamente -->
+  <header id="header-placeholder"></header>
+
+  <section class="sobre-section">
+    <div class="sobre-container">
+      <div class="sobre-content">
+
+        <!-- Imagem do Perfil -->
+        <div class="sobre-image">
+          <img src="../images/eu.jpeg" alt="Rodrigo Nascimento" />
+        </div>
+
+        <!-- Texto de Apresentação -->
+        <div class="sobre-texto">
+          <h2><span>Sobre</span> mim</h2>
+
+          <p style="font-weight: bold; font-size: 1.8rem;">Quem é Rodrigo?</p>
+
+          <p>
+            <b>Iniciei minha trajetória na tecnologia em 2012 como </b>
+               Auxiliar de Suporte técnico e estudando Redes de Computadores, 
+               fui desenvolvendo habilidades e competências na resolução de falhas e 
+               tratamento de incidentes somando um conjunto de boas práticas para gestão de serviços de TI. 
+          </p>
+          <p>
+               Há alguns anos venho me dedicando dentro do <b>mundo dos Dados, 
+               desenvolvendo habilidades analíticas</b> e compreensão de negócios, 
+               assim como Gestão e Arquitetura de Dados. 
+          </p>
+           <p>   Tenho experiência em modelar estruturas escaláveis, como data lakes e data warehouses, 
+              e também em arquiteturas modernas baseadas em Data Fabric.
+          </p>
+          <p>  Sou estudante em fase de conclusão do <b>curso de Ciência de Dados e tenho grande interesse em me especializar na área de Engenharia de Dados.</b> 
+              Durante minha formação, desenvolvi habilidades em análise, modelagem e visualização de dados.
+           
+          </p>
+
+          <!-- Informações pessoais -->
+          <div class="info-grid">
+            <div><i class="fa fa-user"></i> <strong>Nome:</strong> Rodrigo Nascimento</div>
+            <div><i class="fa fa-envelope"></i> <strong>Email:</strong> nascimento@hotmail.com</div>
+            <div><i class="fa fa-map-marker-alt"></i> <strong>Localização:</strong> São Paulo - SP</div>
+            <div><i class="fa fa-briefcase"></i> <strong>Experiência:</strong> 10+ anos</div>
+          </div>
+
+          <!-- Botões -->
+          <div class="sobre-buttons">
+            <a href="#" class="btn btn-primary">
+              <i class="fa fa-download"></i> Download CV
+            </a>
+            <a href="https://wa.me/5511989561439" class="btn btn-outline">
+              <i class="fab fa-whatsapp"></i> Me contate
+            </a>
+          </div>
+
+        </div> <!-- /.sobre-texto -->
+      </div> <!-- /.sobre-content -->
+    </div> <!-- /.sobre-container -->
+  </section>
+
+  <script>
+  fetch('/header.html')  // Sobe uma pasta e busca o header
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('header-placeholder').innerHTML = html;
+    })
+    .catch(err => console.error('Erro ao carregar o header:', err));
+</script>
+
+<script>
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+    <div id="footer"></div>
+
+</body>
+</html>
