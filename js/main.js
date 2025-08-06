@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const footerPlaceholder = document.getElementById('footer');
     if (footerPlaceholder) {
-        fetch('footer.html')
+        fetch('/footer.html')
             .then(response => response.text())
             .then(data => {
                 footerPlaceholder.innerHTML = data;
@@ -82,7 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
        ATUALIZAÇÃO DE SKILLS COM BASE NOS PROJETOS
        ========================================================================= */
     function atualizarSkillsComProjetos() {
-        fetch('projetos.html')
+        fetch('/sections/projetos.html') // Caminho correto absoluto
+
             .then(res => res.text())
             .then(html => {
                 const parser = new DOMParser();
@@ -122,21 +123,9 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Erro ao atualizar skills:', error));
     }
     
-    // Você pode chamar a função aqui, se a página atual for a de skills
-    // const currentPath = window.location.pathname;
-    // if (currentPath.includes('skills.html')) {
-    //     atualizarSkillsComProjetos();
-    // }
+   const currentPath = window.location.pathname;
+if (currentPath.includes('skills.html')) {
+    atualizarSkillsComProjetos();
+}
 
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-menu");
-
-  if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-      navMenu.classList.toggle("show");
-    });
-  }
 });
