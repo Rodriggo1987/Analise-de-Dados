@@ -146,13 +146,9 @@ nav ul li a:hover {
 
 .home-section {
   background: linear-gradient(to bottom right, #020f1f, #a1c4fd);
-  padding: 120px 0 50px; /* ⬅ empurra o conteúdo para baixo do header */
+  padding-top:  120px 0 50px; /* ⬅ empurra o conteúdo para baixo do header */
 }
 
-.home-section {
-  background: linear-gradient(to bottom right, #020f1f, #a1c4fd);
-  padding: 120px 0 50px; /* Topo aumentado para compensar o header fixo */
-}
 
 
 .left {
