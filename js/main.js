@@ -1,5 +1,5 @@
 const text = [
-  "Apaixonado Pelo Mundo dos Dados",
+  "Dados para Insights de Negocio",
   "Analise e Segurança dos Dados",
   "Visualização e Tomada de Decisão com Dados"
 ];
