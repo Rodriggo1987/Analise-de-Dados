@@ -108,6 +108,13 @@ nav ul li a {
   margin-left: 0;
 }
 
+nav ul li a.active {
+  color: var(--color-accent);
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+
 nav ul li:not(:first-child) a {
   border-left: 1px solid #ccc;
 }
