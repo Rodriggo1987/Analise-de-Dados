@@ -27,11 +27,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color:white !important;
+  background-color: white !important;
   color: white !important;
   font-family: 'Segoe UI', sans-serif;
 }
-
 
 /*===========================
   CONTAINER GERAL
@@ -64,11 +63,10 @@ header .container {
   height: 80px;
 }
 
-
 .logo-container {
   display: flex;
-  align-items: center;  /* Alinha verticalmente */
-  gap: 0.0rem;
+  align-items: center;
+  gap: 0;
 }
 
 .logo-img {
@@ -76,13 +74,9 @@ header .container {
   height: 150px;
   object-fit: contain;
   display: block;
-  order: 2;  /* imagem depois */
-  margin-left: -40px; /* ajusta para colar a imagem no texto */
-
+  order: 2;
+  margin-left: -40px;
 }
-
-
-
 
 .logo {
   font-weight: bold;
@@ -93,10 +87,8 @@ header .container {
   -webkit-text-fill-color: transparent;
   line-height: 1;
   white-space: nowrap;
-   order: 1;  /* nome primeiro */
+  order: 1;
 }
-
-
 
 nav ul {
   list-style: none;
@@ -108,15 +100,14 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color:black;
+  color: black;
   font-size: 16px;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   transition: color 0.3s ease;
-  padding-left: 20px;  /* espaço entre traço e texto */
-  margin-left: 0;       /* sem margem extra */
+  padding-left: 20px;
+  margin-left: 0;
 }
 
-/* Traço vertical apenas entre itens (a partir do 2º) */
 nav ul li:not(:first-child) a {
   border-left: 1px solid #ccc;
 }
@@ -126,13 +117,12 @@ nav ul li a:hover {
 }
 
 /*===========================
-  HOME SECTION (Frame em Azul)
+  HOME SECTION (Apresentação)
 ===========================*/
-
 
 .home-section {
   background: linear-gradient(to bottom right, #020f1f, #a1c4fd);
-  padding: 50px 0; /* ⬅ Aqui você controla a altura (antes devia estar 100px ou mais) */
+  padding: 50px 0;
 }
 
 .home-section .container {
@@ -140,18 +130,16 @@ nav ul li a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+  flex-wrap: wrap;
 }
-
-
 
 .left {
   flex: 1;
-  min-width: 300px;
+  min-width: 280px;
   font-family: "Antic Slab", serif;
 }
 
 .left h1 {
-
   font-size: 4rem;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -166,14 +154,27 @@ nav ul li a:hover {
 }
 
 .home-section .left p {
-  font-size: 1.3rem !important;
-  color: white
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 30px;
 }
 
+/* Texto dinâmico */
+#typed-text {
+  min-height: 30px;
+  display: block;
+  background: linear-gradient(90deg, #e0dada, var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Lado direito com imagem */
 .right {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .right img {
@@ -186,19 +187,10 @@ nav ul li a:hover {
   animation: flutuar 3s ease-in-out infinite;
 }
 
-/* Texto em movimento na home */
-#typed-text {
-  min-height: 30px;
-  display: block;
-  background: linear-gradient(90deg, #e0dada, var(--color-accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-}
-
 /*===========================
-  BOTÕES
+  BOTÕES GERAIS
 ===========================*/
+
 .buttons a,
 .sobre-buttons a {
   padding: 12px 24px;
@@ -206,61 +198,76 @@ nav ul li a:hover {
   border-radius: 8px;
   font-weight: bold;
   font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
+  display: inline-block;
   margin-right: 10px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
+/* Botão primário: contate-me */
 .btn-primary {
-  background-color:#0a7f81;
+  background-color: #0a7f81;
   color: white;
   border: none;
-
 }
 
 .btn-primary:hover {
   background-color: var(--color-primary-dark);
 }
 
+/* Botão secundário: ver projetos */
 .btn-secondary {
   border: 2px solid var(--color-primary);
   color: white;
+  background-color: transparent;
 }
 
 .btn-secondary:hover {
   background-color: var(--color-primary);
-}
-
-.btn-outline {
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
-  background: transparent;
-}
-
-.btn-outline:hover {
-  background-color: var(--color-primary);
   color: white;
 }
+
+/*===========================
+  RESPONSIVO HOME SECTION
+===========================*/
+
+@media (max-width: 768px) {
+  .home-section .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .left h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-section .left p {
+    font-size: 1rem;
+  }
+
+  .right img {
+    max-width: 200px;
+    margin-top: 20px;
+  }
+}
+
 
 /*===========================
   SOBRE SECTION
 ===========================*/
 .sobre-section {
   padding: 80px 20px;
-  background-color: white;
+  background-color: #fff;
   color: var(--color-text-dark);
   max-width: 1200px;
   margin: 0 auto;
-  
 }
 
 .sobre {
-  padding-top: 10px; /* ou menos */
-  scroll-margin-top: 140px; /* para quando clicar no menu */
-
+  padding-top: 10px;
+  scroll-margin-top: 140px;
 }
 
 .sobre-container {
@@ -271,77 +278,76 @@ nav ul li a:hover {
 .sobre-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 
+/*===========================
+  IMAGEM SOBRE
+===========================*/
 .sobre-image {
-  flex: 0 0 280px; /* fixa largura da imagem */
+  flex: 0 0 280px;
 }
 
 .sobre-image img {
   width: 280px;
   max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(228, 30, 30, 0.2);
   object-fit: cover;
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(228, 30, 30, 0.2);
 }
 
 .sobre-image img:hover {
   transform: scale(1.05);
 }
 
+/*===========================
+  TEXTO SOBRE
+===========================*/
 .sobre-texto {
   flex: 1;
-  text-align: justify;
-  padding: 10px 20px; /* de 20px para 10px no topo */
   max-width: 700px;
+  padding: 10px 20px;
   color: #000;
+  text-align: justify;
 }
 
 .sobre-texto h2 {
-  margin-top: 0;        /* estava "2", isso não é válido */
-  margin-bottom: 60px;  /* se quiser menos espaço abaixo do título */
-  font-family: 'Times New Roman', Times, serif;
-  margin-bottom: 100px; /* deixa um espaçamento pequeno para baixo */
+  margin: 0 0 60px;
   font-size: 3.5rem;
- 
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .sobre-texto h2 span {
-  font-family: 'Times New Roman', Times, serif;
-  margin-top: 2;
   font-size: 3.8rem;
   font-weight: 700;
-  background: linear-gradient(90deg, #133261, #7e0a6a); /* degrade roxo para azul */
+  background: linear-gradient(90deg, #133261, #7e0a6a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-
 .sobre-texto p {
-  margin-top: 20px;
+  margin: 20px 0 15px;
   font-size: 1.25rem;
   line-height: 1.5;
-  margin-bottom: 15px;
 }
 
 /*===========================
-  SOBRE BUTTONS
+  BOTÕES SOBRE
 ===========================*/
 .sobre-buttons {
-  display: inline-block	;
-  gap: 20px;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 20px;
+  justify-content: flex-start;
   margin-top: 30px;
 }
+
 .sobre-buttons a {
   cursor: pointer;
 }
-
 
 /*===========================
   INFO GRID (Nome, Email, etc)
@@ -350,23 +356,16 @@ nav ul li a:hover {
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: 5px 30px;
-  margin: 20px 0; 
-  margin-top: 30px;       /* Margem para Baixo */
-  padding: 0;            /* Remove o espaçamento interno */
-  max-width: 120%;       /* Garante alinhamento com o restante do texto */
-  color: rgb(26, 18, 18);
+  margin-top: 30px;
+  color: #1a1212;
   font-size: 20px;
 }
-
-
 
 .info-grid div {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;     /* <-- impede quebra de linha dentro da div */
-  gap: 5px;              /* opcional, melhora o espaçamento entre os itens */
+  gap: 5px;
 }
-
 
 .info-grid strong {
   font-weight: bold;
@@ -375,12 +374,14 @@ nav ul li a:hover {
 
 .info-grid i {
   margin-right: 8px;
-  color: #3d0770;
-  font-size: 18px;         /* ajusta o tamanho dos ícones */
+  font-size: 18px;
   line-height: 1;
+  color: #3d0770;
 }
 
-
+/*===========================
+  CONTATO SECTION (estrutura básica, caso esteja próxima)
+===========================*/
 .contato-section {
   display: flex;
   flex-wrap: wrap;
@@ -392,76 +393,46 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
-
 /*===========================
-  ANIMAÇÕES
-===========================*/
-@keyframes flutuar {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-/*===========================
-  ACESSIBILIDADE
-===========================*/
-a:focus,
-button:focus {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-/*===========================
-  RESPONSIVO PARA TELAS PEQUENAS
+  RESPONSIVO - TELAS PEQUENAS
 ===========================*/
 @media (max-width: 768px) {
   .sobre-content {
     flex-direction: column;
     text-align: center;
   }
+
+  .sobre-image,
+  .sobre-image img {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
   .sobre-texto {
-    min-width: auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  .sobre-texto h2,
+  .sobre-texto h2 span {
+    font-size: 2.2rem;
   }
 
   .sobre-texto p {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.0rem;
+    font-size: 1rem;
+  }
 
+  .info-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
   }
 
   .sobre-buttons {
     justify-content: center;
-    padding-left: 0;
-  }
-  .home-section,
-  .conteudo,
-  .container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-  }
-  .right img,
-  .foto img {
-    width: 200px;
-    margin-top: 20px;
-  }
-  header .container {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 10px 0;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
   }
 }
-
-
 
 
 
@@ -814,90 +785,3 @@ color: white;
 }
 
 
-@media (max-width: 768px) {
-  .home-section .container {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .left h1 {
-    font-size: 2.2rem;
-  }
-
-  .home-section .left p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .right img {
-    width: 220px;
-    margin-top: 30px;
-  }
-}
-@media (max-width: 768px) {
-  .sobre-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .sobre-texto {
-    padding: 0 10px;
-    text-align: justify;
-  }
-
-  .sobre-texto h2 {
-    font-size: 2.4rem;
-    margin-bottom: 30px;
-  }
-
-  .sobre-texto h2 span {
-    font-size: 2.6rem;
-  }
-
-  .sobre-image {
-    flex: none;
-    margin-bottom: 20px;
-  }
-
-  .sobre-image img {
-    width: 200px;
-  }
-
-  .info-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .left h1 {
-    font-size: 1.8rem;
-  }
-
-  .left p {
-    font-size: 1rem;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  nav ul {
-    gap: 5px;
-  }
-
-  .logo-img {
-    width: 100px;
-    height: 100px;
-  }
-}
