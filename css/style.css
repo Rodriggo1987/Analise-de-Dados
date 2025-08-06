@@ -77,23 +77,23 @@ header .container {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 10px; /* espaçamento entre imagem e nome */
+  gap: 1px; /* espaçamento entre imagem e nome */
+  flex-direction: row-reverse;
+  
 }
 
 .logo-img {
-  width: 150px;
+  width: 120px;
   height: auto;
   object-fit: contain;
   display: block;
-  margin: 1;
   order: 1;
 }
 
 .logo {
   font-weight: bold;
   font-size: 1.6rem;
-  margin: 0;
-  margin-right:5px;
+  margin-left: 5px;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
