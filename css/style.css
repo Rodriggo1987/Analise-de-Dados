@@ -30,10 +30,12 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: white !important;
-    color: var(--color-text-dark); /* Adicionei uma cor escura padrão */
     font-family: 'Segoe UI', sans-serif;
+    background-color: white;
 }
+
+
+
 /*===========================
   CONTAINER GERAL
 ===========================*/
@@ -71,6 +73,12 @@ header .container {
   align-items: center;
   justify-content: space-between;
 }
+
+.container h1{
+color: #f5f2f5;
+
+}
+
 
 /* Logo com nome + imagem */
 .logo-container {
@@ -269,7 +277,13 @@ nav ul li a:hover {
     margin-top: 20px;
   }
 }
-
+/* Correção para garantir que o menu hambúrguer seja exibido em telas pequenas */
+@media (max-width: 768px) {
+    /* Usando uma especificidade maior */
+    header .container .hamburger-menu {
+        display: block !important;
+    }
+}
 
 /*===========================
   SOBRE SECTION
@@ -810,86 +824,41 @@ color: white;
   MENU HAMBÚRGUER E RESPONSIVIDADE
 ===========================*/
 
-/* Oculta o ícone de hambúrguer por padrão em telas grandes */
-.hamburger-menu {
+/* Oculta o hambúrguer no desktop */
+.hamburger {
   display: none;
-  background: none;
-  border: none;
+  font-size: 30px;
   cursor: pointer;
-  padding: 10px;
-  position: relative;
-  z-index: 1001; /* Garante que o botão fique por cima de tudo */
 }
 
-.hamburger-menu .line {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: var(--color-primary-dark);
-  margin: 5px 0;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Estilo para o menu quando está aberto */
-.hamburger-menu.active .line:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-menu.active .line:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger-menu.active .line:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Media Query para telas menores */
+/* Responsivo: mostra o botão e esconde o menu normal */
 @media (max-width: 768px) {
-  header .container {
-    padding: 0 15px; /* Reduz o padding para mais espaço */
+  nav {
+    display: none;
+    position: absolute;
+    top: 80px; /* abaixo do header */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  /* Exibe o botão de hambúrguer em telas menores */
-  .hamburger-menu {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .hamburger {
+    display: block;
+    color: black;
+  }
+
+  nav.show {
     display: block;
   }
 
-  /* Esconde o menu de navegação por padrão em telas menores */
-  header nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px; /* Alinha abaixo do header */
-    left: 0;
-    width: 100%;
-    background-color: var(--color-bg);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-  }
-
-  header nav.active {
-    display: flex; /* Exibe o menu quando a classe 'active' é adicionada */
-  }
-
-  header nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  header nav ul li {
-    text-align: center;
-    border-bottom: 1px solid #eee;
-  }
-
-  header nav ul li:not(:first-child) a {
-    border-left: none; /* Remove a borda vertical */
-  }
-
-  header nav ul li a {
-    display: block; /* Ocupa a largura total */
-    padding: 15px 0;
-    color: var(--color-text-dark);
-    font-size: 1.1rem;
+  .container {
+    justify-content: space-between;
   }
 }
-
