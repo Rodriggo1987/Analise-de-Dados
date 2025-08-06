@@ -817,47 +817,72 @@ color: white;
 }
 
 
-
-
-
-
 /*===========================
-  MENU HAMBÚRGUER E RESPONSIVIDADE
+  ESTILIZAÇÃO DO CABEÇALHO E NAVEGAÇÃO (Desktop - Padrão)
 ===========================*/
 
-/* Oculta o hambúrguer no desktop */
-.hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
+/* Garante que o menu de navegação esteja visível por padrão (desktop) */
+header nav {
+    display: flex;
 }
 
-/* Responsivo: mostra o botão e esconde o menu normal */
-@media (max-width: 768px) {
-  nav {
+/* Oculta o botão do hambúrguer em telas maiores (desktop) */
+#hamburger {
     display: none;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  nav.show {
-    display: block;
-  }
-
-  .hamburger {
-    display: block;
-    font-size: 30px;
-    color: black;
+    background: none;
+    border: none;
     cursor: pointer;
-  }
+    padding: 10px;
+    position: relative;
+    z-index: 1001;
+}
 
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-  }
+/* Estiliza as 3 linhas do menu (sempre visíveis no botão, mas o botão está oculto) */
+#hamburger .line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/*===========================
+  RESPONSIVIDADE (Mobile - até 768px)
+===========================*/
+@media (max-width: 768px) {
+    /* Esconde o menu de navegação principal */
+    header nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajuste este valor se necessário */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Exibe o menu de navegação quando a classe 'active' está presente */
+    header nav.active {
+        display: flex;
+    }
+
+    /* Exibe o botão do hambúrguer */
+    #hamburger {
+        display: block;
+    }
+    
+    /* Animação do botão para o 'X' */
+    #hamburger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger.active .line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #hamburger.active .line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }

@@ -227,7 +227,31 @@
     atualizarSkillsComProjetos(); // Função para animar barras conforme projetos
   </script>
 
- 
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    
+
+        // Ativa destaque no menu
+        const currentPath = window.location.pathname;
+        document.querySelectorAll("nav ul li a").forEach(link => {
+          if (new URL(link.href).pathname === currentPath) {
+            link.classList.add("active");
+          }
+        });
+
+        // Ativa menu hamburguer
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("nav-menu");
+
+        if (hamburger && navMenu) {
+          hamburger.addEventListener("click", function () {
+            navMenu.classList.toggle("show");
+          });
+        }
+      })
+      .catch(err => console.error("Erro ao carregar header:", err));
+  
+</script>
 
 </body>
 </html>

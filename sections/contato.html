@@ -111,8 +111,38 @@
         }
       });
     });
-</script>
 
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Espera o header ser carregado dinamicamente
+    fetch('/header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+
+        // Ativa destaque no menu
+        const currentPath = window.location.pathname;
+        document.querySelectorAll("nav ul li a").forEach(link => {
+          if (new URL(link.href).pathname === currentPath) {
+            link.classList.add("active");
+          }
+        });
+
+        // Ativa menu hamburguer
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("nav-menu");
+
+        if (hamburger && navMenu) {
+          hamburger.addEventListener("click", function () {
+            navMenu.classList.toggle("show");
+          });
+        }
+      })
+      .catch(err => console.error("Erro ao carregar header:", err));
+  });
+</script>
+</script>
+<script src="../js/main.js"></script>
 
 </body>
 </html>

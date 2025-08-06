@@ -1,48 +1,56 @@
+// Aguarda o carregamento completo do DOM para evitar erros
 document.addEventListener('DOMContentLoaded', () => {
 
     /* =========================================================================
-       INICIALIZAÇÃO DO CABEÇALHO E RODAPÉ (com menu hambúrguer)
+       1. Carregamento Dinâmico do Cabeçalho e Rodapé
        ========================================================================= */
+
+    // Carrega o cabeçalho e insere no placeholder
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder) {
         fetch('/header.html')
             .then(res => res.text())
             .then(html => {
                 headerPlaceholder.innerHTML = html;
-
-                // Lógica do Menu Hambúrguer (Adicionada na versão anterior)
-                const hamburger = document.querySelector('.hamburger-menu');
-                const nav = document.querySelector('header nav');
-                if (hamburger && nav) {
+                
+                // As funcionalidades do header precisam ser ativadas aqui, após o HTML ser carregado.
+                
+                // Lógica do Menu Hambúrguer
+                const hamburger = document.getElementById('hamburger');
+                const navMenu = document.getElementById('nav-menu');
+                if (hamburger && navMenu) {
                     hamburger.addEventListener('click', () => {
+                        // Adiciona/remove a classe 'active' para animar o ícone e mostrar o menu
                         hamburger.classList.toggle('active');
-                        nav.classList.toggle('active');
+                        navMenu.classList.toggle('active');
                     });
                 }
                 
                 // Destacar o link ativo no menu
                 const currentPath = window.location.pathname;
-                document.querySelectorAll("nav ul li a").forEach(link => {
+                document.querySelectorAll("#nav-menu ul li a").forEach(link => {
                     const linkPath = new URL(link.href).pathname;
                     if (linkPath === currentPath) {
                         link.classList.add("active");
                     }
                 });
             })
-            .catch(err => console.error("Erro ao carregar header:", err));
+            .catch(err => console.error("Erro ao carregar o header:", err));
     }
-
+    
+    // Carrega o rodapé e insere no placeholder
     const footerPlaceholder = document.getElementById('footer');
     if (footerPlaceholder) {
         fetch('/footer.html')
-            .then(response => response.text())
+            .then(res => res.text())
             .then(data => {
                 footerPlaceholder.innerHTML = data;
             });
     }
 
+
     /* =========================================================================
-       EFEITO DE DIGITAÇÃO NA HOMEPAGE
+       2. Efeito de Digitação na Homepage (Se o elemento existir)
        ========================================================================= */
     const typedTextElement = document.getElementById('typed-text');
     if (typedTextElement) {
@@ -78,12 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
         type(); // Inicia o efeito
     }
 
-    /* =========================================================================
-       ATUALIZAÇÃO DE SKILLS COM BASE NOS PROJETOS
-       ========================================================================= */
-    function atualizarSkillsComProjetos() {
-        fetch('/sections/projetos.html') // Caminho correto absoluto
 
+    /* =========================================================================
+       3. Atualização de Skills com base em Projetos (Se a página for de skills)
+       ========================================================================= */
+    const atualizarSkillsComProjetos = () => {
+        fetch('projetos.html')
             .then(res => res.text())
             .then(html => {
                 const parser = new DOMParser();
@@ -123,9 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Erro ao atualizar skills:', error));
     }
     
-   const currentPath = window.location.pathname;
-if (currentPath.includes('skills.html')) {
-    atualizarSkillsComProjetos();
-}
-
+    // Roda a função apenas se a página atual for a de skills
+    if (window.location.pathname.includes('skills.html')) {
+        atualizarSkillsComProjetos();
+    }
 });

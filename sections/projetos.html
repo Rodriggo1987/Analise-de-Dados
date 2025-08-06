@@ -248,6 +248,8 @@ Um gráfico de dispersão é um tipo de visualização de dados que mostra a rel
     <!-- Adicione mais projetos aqui -->
   </div>
 </section>
+
+
 <script>
   fetch('/header.html') // use "./header.html" se estiver na raiz
     .then(response => response.text())
@@ -265,26 +267,7 @@ Um gráfico de dispersão é um tipo de visualização de dados que mostra a rel
   </script>
 <div id="footer"></div>
 
-<script>
-  // Espera o header ser carregado antes de verificar a URL
-  fetch('/header.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('header-placeholder').innerHTML = html;
-
-      // Agora que o header foi inserido, vamos destacar o link ativo:
-      const currentPath = window.location.pathname;
-      const links = document.querySelectorAll("nav ul li a");
-
-      links.forEach(link => {
-        const linkPath = new URL(link.href).pathname;
-
-        if (linkPath === currentPath) {
-          link.classList.add("active");
-        }
-      });
-    });
-</script>
+<script src="../js/main.js"></script>
 
 
 </body>
