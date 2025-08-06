@@ -109,9 +109,9 @@ nav ul li a {
 }
 
 nav ul li a.active {
-  color: var(--color-accent);
+  color: var(--color-accent); /* Ou outra cor que destaque */
   font-weight: bold;
-  border-bottom: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent); /* Ou qualquer destaque */
 }
 
 

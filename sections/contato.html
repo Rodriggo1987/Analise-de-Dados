@@ -92,5 +92,27 @@
   </script>
   <div id="footer"></div>
 
+  <script>
+  // Espera o header ser carregado antes de verificar a URL
+  fetch('/header.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('header-placeholder').innerHTML = html;
+
+      // Agora que o header foi inserido, vamos destacar o link ativo:
+      const currentPath = window.location.pathname;
+      const links = document.querySelectorAll("nav ul li a");
+
+      links.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+
+        if (linkPath === currentPath) {
+          link.classList.add("active");
+        }
+      });
+    });
+</script>
+
+
 </body>
 </html>

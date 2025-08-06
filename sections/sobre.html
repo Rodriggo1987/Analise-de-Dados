@@ -88,7 +88,32 @@
         document.getElementById('footer').innerHTML = data;
       });
   </script>
+  <script>
+  fetch('/header.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('header-placeholder').innerHTML = html;
+
+      // Depois que o header é carregado, destacamos o menu atual
+      const currentPath = window.location.pathname;
+
+      document.querySelectorAll("nav ul li a").forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+
+        if (linkPath === currentPath) {
+          link.classList.add("active");
+        }
+      });
+    })
+    .catch(err => console.error("Erro ao carregar header:", err));
+</script>
+
+
+
     <div id="footer"></div>
+
+  
+
 
 </body>
 </html>

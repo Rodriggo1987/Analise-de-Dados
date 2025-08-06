@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfólio de Rodrigo Nascimento">
   <title>Rodrigo Cerqueira | Portfólio</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,14 +42,27 @@
   <script src="js/main.js"></script>
 
 
-  <script>
-  fetch('header.html') // use "./header.html" se estiver na raiz
-    .then(response => response.text())
+
+<script>
+  fetch('/header.html')
+    .then(res => res.text())
     .then(html => {
       document.getElementById('header-placeholder').innerHTML = html;
+
+      // Depois que o header é carregado, destacamos o menu atual
+      const currentPath = window.location.pathname;
+
+      document.querySelectorAll("nav ul li a").forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+
+        if (linkPath === currentPath) {
+          link.classList.add("active");
+        }
+      });
     })
-    .catch(error => console.error('Erro ao carregar header:', error));
+    .catch(err => console.error("Erro ao carregar header:", err));
 </script>
+
 
 <div id="footer"></div>
 
