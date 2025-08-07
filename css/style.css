@@ -257,34 +257,37 @@ nav ul li a:hover {
 /*===========================
   RESPONSIVO HOME SECTION
 ===========================*/
+/* Ajuste para a seção de informações no mobile */
+@media (max-width: 1024px) {
+    .info-container {
+        display: flex;
+        flex-direction: column; /* Cada info em uma linha */
+        gap: 10px; /* Espaço entre as linhas */
+    }
 
-@media (max-width: 768px) {
-  .home-section .container {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
+    .info-item {
+        display: flex;
+        align-items: center; /* Ícone e texto alinhados verticalmente */
+        flex-wrap: wrap; /* Caso o texto seja grande, quebra para baixo */
+        font-size: 14px;
+    }
 
-  .left h1 {
-    font-size: 2.5rem;
-  }
+    .info-item i {
+        margin-right: 8px; /* Espaço entre ícone e texto */
+        font-size: 16px;
+    }
 
-  .home-section .left p {
-    font-size: 1rem;
-  }
+    .info-label {
+        font-weight: bold;
+        margin-right: 5px;
+    }
 
-  .right img {
-    max-width: 200px;
-    margin-top: 20px;
-  }
-}
-/* Correção para garantir que o menu hambúrguer seja exibido em telas pequenas */
-@media (max-width: 768px) {
-    /* Usando uma especificidade maior */
-    header .container .hamburger-menu {
-        display: block !important;
+    .info-value {
+        flex: 1;
+        word-break: break-word; /* Quebra se for um email muito grande */
     }
 }
+
 
 /*===========================
   SOBRE SECTION
@@ -579,7 +582,7 @@ nav ul li a:hover {
 }
 
 /* === RESPONSIVO === */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .skills-box {
     width: 100%;
     margin-bottom: 40px;
