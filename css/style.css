@@ -850,7 +850,7 @@ header nav {
 /*===========================
   RESPONSIVIDADE (Mobile - até 768px)
 ===========================*/
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     /* Esconde o menu de navegação principal */
     header nav {
         display: none;
@@ -871,6 +871,10 @@ header nav {
     /* Exibe o botão do hambúrguer */
     #hamburger {
         display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 9999;
     }
     
     /* Animação do botão para o 'X' */
