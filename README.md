@@ -19,6 +19,8 @@ Este repositório contém diversos projetos desenvolvidos por Rodrigo Nascimento
  
 - 📉 [Power BI: Análise com Dax] - https://app.powerbi.com/reportEmbed?reportId=e8197153-8de7-4106-8284-67555da8f064&autoAuth=true&ctid=3ad67aac-219a-421d-9475-561ebcb1cd19
 
+- 📉 [Power BI: Gerenciamento de Custos do Azure] - https://app.powerbi.com/links/ju4mwC5tGl?ctid=57121128-1dc7-4603-a1d9-99fcee42b82c&pbi_source=linkShare
+
 
 
 
